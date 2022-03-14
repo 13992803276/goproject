@@ -5,7 +5,7 @@ import (
 )
 
 /*
-	算数运算符讲解
+	算数运算符
 */
 func main() {
 	fmt.Println("hello world")
