@@ -6,7 +6,7 @@ import (
 )
 
 /*
-	golang面向对象--继承
+	golang 面向对象--继承
 	golang 可以多继承。
 */
 
