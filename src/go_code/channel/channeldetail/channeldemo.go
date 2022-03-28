@@ -13,9 +13,18 @@ func main() {
 	chanInt <- 30
 	chanInt <- 40
 	//遍历管道取出各个元素,遍历前必须先关闭管道
-	close(chanInt)
+	/*close(chanInt)
 	for date := range chanInt {
 		fmt.Println(strconv.Itoa(date))
+	}*/
+label:
+	for {
+		select {
+		case v := <-chanInt:
+			fmt.Println(strconv.Itoa(v))
+		default:
+			break label
+		}
 	}
 	//map类型的channel基本使用
 	var chanMap = make(chan map[string]string, 10)
